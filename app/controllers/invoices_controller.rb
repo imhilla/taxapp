@@ -11,6 +11,7 @@ class InvoicesController < ApplicationController
     else
       render json: invoice.errors.full_messages
     end
+     @full_paid = Invoice.fully_paid?
   end
 
   def show 
